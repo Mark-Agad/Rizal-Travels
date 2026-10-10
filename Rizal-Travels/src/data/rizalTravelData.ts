@@ -76,7 +76,7 @@ export const countries: Country[] = [
     name: "Spain",
     flag: "🇪🇸",
     shortDescription: "Placeholder overview of Rizal's time in Spain.",
-    image: "",
+    image: "/map_spain.jpg",
     places: [
       placeholderPlace("madrid", "Madrid"),
       placeholderPlace("barcelona", "Barcelona"),
@@ -87,7 +87,7 @@ export const countries: Country[] = [
     name: "France",
     flag: "🇫🇷",
     shortDescription: "Placeholder overview of Rizal's time in France.",
-    image: "",
+    image: "/map_france.jpg",
     places: [
       placeholderPlace("paris", "Paris"),
     ],
@@ -162,7 +162,7 @@ export const countries: Country[] = [
     name: "Germany",
     flag: "🇩🇪",
     shortDescription: "Placeholder overview of Rizal's time in Germany.",
-    image: "",
+    image: "/map_germany.jpg",
     places: [
       placeholderPlace("heidelberg", "Heidelberg"),
       placeholderPlace("berlin", "Berlin"),
