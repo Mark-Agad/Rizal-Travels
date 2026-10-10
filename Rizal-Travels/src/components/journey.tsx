@@ -597,9 +597,9 @@ export function PlaceSection({
           </div>
         </div>
         <Divider className="mt-5 max-w-md" />
-        <p className="mt-4 max-w-2xl text-base uppercase tracking-[0.18em] text-muted-foreground">
+        {/* <p className="mt-4 max-w-2xl text-base uppercase tracking-[0.18em] text-muted-foreground">
           Entries from the journal · scroll to read them in order
-        </p>
+        </p> */}
       </motion.div>
 
       <div className="mt-14">
