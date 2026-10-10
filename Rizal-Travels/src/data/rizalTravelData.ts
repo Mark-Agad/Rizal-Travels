@@ -71,15 +71,85 @@ const placeholderPlace = (id: string, name: string): Place => ({
 // ============================================================
 
 export const countries: Country[] = [
-  {
+    {
     id: "spain",
     name: "Spain",
     flag: "🇪🇸",
-    shortDescription: "Placeholder overview of Rizal's time in Spain.",
-    image: "",
+    shortDescription: "Rizal's first European base. He arrived in Barcelona in 1882 and studied in Madrid until 1884, where his political ideas took shape.",
+    image: "/spain_barcelona.jpg",
     places: [
-      placeholderPlace("madrid", "Madrid"),
-      placeholderPlace("barcelona", "Barcelona"),
+      {
+        id: "barcelona",
+        name: "Barcelona",
+        shortDescription: "His port of arrival in Spain in June 1882, and where he wrote his first article on Spanish soil.",
+        image: "/barcelona.jpg",
+        highlights: [
+          {
+            id: "h1",
+            year: "June 1882",
+            title: "Arrival in Barcelona",
+            category: "Arrival",
+            description: "After travelling by sea and then by train from Marseilles, Rizal reached Barcelona on June 16, 1882. He first found the city unpleasant, then came to admire its freedom and its people. Filipino friends welcomed him with a gathering at a café.",
+            image: "/barcelona_cafe.jpg",
+          },
+          {
+            id: "h2",
+            year: "1882",
+            title: "“Amor Patrio”",
+            category: "Writing",
+            description: "Rizal wrote the essay “Amor Patrio” in Barcelona, his first article written on Spanish soil. He sent it to the Diariong Tagalog in Manila, whose publisher encouraged him to write more.",
+            image: "/amor_patrio.jpg",
+          },
+          {
+            id: "h3",
+            year: "Fall 1882",
+            title: "Leaving for Madrid",
+            category: "Journey",
+            description: "News of a cholera outbreak in Manila reached him, and his brother Paciano advised him to continue his medical studies in Madrid. Rizal left Barcelona for the capital in the fall of 1882.",
+            image: "/mandrid.jpg",
+          },
+        ],
+      },
+      {
+        id: "madrid",
+        name: "Madrid",
+        shortDescription: "Where Rizal studied at the Universidad Central de Madrid from 1882 to 1884 and joined Spain's liberal circles.",
+        image: "/town_madrid.jpg",
+        highlights: [
+          {
+            id: "h1",
+            year: "November 1882",
+            title: "Enrolment at the Universidad Central",
+            category: "Education",
+            description: "On November 3, 1882, Rizal enrolled in Medicine and in Philosophy and Letters. Alongside these courses he studied painting and sculpture, took language lessons, and trained in fencing and shooting.",
+            image: "/central_mandrid.jpg",
+          },
+          {
+            id: "h2",
+            year: "1883",
+            title: "Joining a Masonic Lodge",
+            category: "Society",
+            description: "Rizal joined the Acacia lodge in Madrid, hoping to gain support in his campaign against the friars in the Philippines. He was later transferred to Lodge Solidaridad.",
+            image: "/joining_masonic.jpg",
+          },
+          {
+            id: "h3",
+            year: "June 1884",
+            title: "Licentiate in Medicine",
+            category: "Milestone",
+            description: "On June 21, 1884, Rizal received his Licentiate in Medicine from the Universidad Central. He also completed his studies in Philosophy and Letters with excellent ratings.",
+            image: "/rizal_medicine.jpg",
+          },
+          {
+            id: "h4",
+            year: "November 1884",
+            title: "Student Demonstrations",
+            category: "Event",
+            description: "Rizal took part in student demonstrations in support of the professor Miguel Morayta, whose views on academic freedom were condemned by Spain's Catholic bishops.",
+            image: "/student_demo.jpg",
+          },
+        ],
+      },
     ],
   },
   {
