@@ -75,7 +75,7 @@ export const countries: Country[] = [
     id: "spain",
     name: "Spain",
     flag: "🇪🇸",
-    shortDescription: "Placeholder overview of Rizal's time in Spain.",
+    shortDescription: "Rizal's first European base. He arrived in Barcelona in 1882 and studied in Madrid until 1884, where his political ideas took shape.",
     image: "/map_spain.jpg",
     places: [
       {
