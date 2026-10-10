@@ -19,6 +19,7 @@ export const Route = createFileRoute("/europe/")({
 function CountryCard({ country, index }: { country: Country; index: number }) {
   return (
     <motion.div
+      className="h-full"
       initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.15 + index * 0.08 }}
@@ -26,7 +27,7 @@ function CountryCard({ country, index }: { country: Country; index: number }) {
       <Link
         to="/europe/$countryId"
         params={{ countryId: country.id }}
-        className="group relative block bg-card p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-xl"
+        className="group relative flex h-full flex-col bg-card p-6 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-primary/40 hover:shadow-xl"
       >
         <Pin />
         <div className="mb-5 aspect-[4/3] overflow-hidden border border-border bg-muted">
@@ -47,7 +48,7 @@ function CountryCard({ country, index }: { country: Country; index: number }) {
           <h3 className="font-display text-2xl text-card-foreground">{country.name}</h3>
         </div>
         <p className="text-sm leading-relaxed text-muted-foreground">{country.shortDescription}</p>
-        <div className="mt-5 flex justify-end">
+        <div className="mt-auto flex justify-end pt-5">
           <span className="text-[10px] font-bold uppercase tracking-widest text-primary transition-transform group-hover:translate-x-1">
             View Journal →
           </span>
@@ -118,4 +119,4 @@ function Europe() {
       </PageTransition>
     </>
   );
-}
+} 

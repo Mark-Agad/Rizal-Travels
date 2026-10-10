@@ -138,7 +138,7 @@ export const countries: Country[] = [
             title: "Licentiate in Medicine",
             category: "Milestone",
             description: "On June 21, 1884, Rizal received his Licentiate in Medicine from the Universidad Central. He also completed his studies in Philosophy and Letters with excellent ratings.",
-            image: "/rizal_medicine.jpg",
+            image: "/Licentiate_in_Medicine.jpg",
           },
           {
             id: "h4",
@@ -156,10 +156,53 @@ export const countries: Country[] = [
     id: "france",
     name: "France",
     flag: "🇫🇷",
-    shortDescription: "Placeholder overview of Rizal's time in France.",
+    shortDescription: "Rizal's time in France helped him grow as a doctor, historian, and reformist through medical training, historical research, Filipino organizations, and artistic connections.",
     image: "/map_france.jpg",
     places: [
-      placeholderPlace("paris", "Paris"),
+            {
+        id: "paris",
+        name: "Paris",
+        shortDescription: "Paris was a major center of learning, culture, and Filipino intellectual activity during Rizal’s travels in Europe",
+        image: "/paris 2.png",
+        highlights: [
+          {
+            id: "h1",
+            year: "November 1885 – February 1886",
+            title: "Ophthalmology Training",
+            category: "Medical Training",
+            description:
+              "Rizal worked as an assistant at Dr. Louis de Wecker's eye clinic, learning advanced eye-treatment and surgical techniques to help improve his mother's eyesight.",
+            image: "/Ophthalmology training.jpeg",
+          },
+          {
+            id: "h2",
+            year: "1885–1886 and later visits",
+            title: "Interaction with Filipino Artists",
+            category: "Art & Culture",
+            description:
+              "Rizal spent time with Filipino artists such as Juan Luna, visited art studios and museums, and developed his appreciation of European art.",
+            image: "/joserizal_juanluna.jpg",
+          },
+          {
+            id: "h3",
+            year: "1889",
+            title: "Formation of Filipino Organizations",
+            category: "Filipino Nationalism & Organizations",
+            description:
+              "During the Paris Universal Exposition, Rizal organized the Kidlat Club and the Indios Bravos, promoting friendship among Filipinos and pride in Filipino identity. He also established the secret society R.D.L.M.",
+            image: "/kidlatclub.jpg",
+          },
+          {
+            id: "h4",
+            year: "1890",
+            title: "Publication of His Annotated Historical Book",
+            category: "Historical Research & Publication",
+            description:
+              "Rizal published his annotated edition of Antonio de Morga's Sucesos de las Islas Filipinas, presenting historical evidence of Filipino society before Spanish colonization. He had conducted much of the underlying research in London.",
+            image: "/islasbook.jpg",
+          },
+        ],
+      },
     ],
   },
   {

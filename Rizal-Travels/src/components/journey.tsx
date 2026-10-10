@@ -219,9 +219,9 @@ export function CountryHeader({ country }: { country: Country }) {
           <Divider className="mt-7 max-w-xs" />
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">{country.shortDescription}</p>
 
-          <p className="mt-8 text-[11px] uppercase tracking-[0.26em] text-muted-foreground/80">
-            /* {count} {count === 1 ? "place" : "places"} in this chapter · placeholder entry */
-          </p>
+       <p className="mt-8 text-[11px] uppercase tracking-[0.26em] text-muted-foreground/80">
+  {count} {count === 1 ? "place" : "places"} in this chapter
+</p>
         </motion.div>
 
         <motion.div variants={rise}>
@@ -351,9 +351,9 @@ export function PlaceHeader({
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">{place.shortDescription}</p>
 
           <p className="mt-8 text-[11px] uppercase tracking-[0.26em] text-muted-foreground/80">
-            {stop && total ? `Stop ${String(stop).padStart(2, "0")} of ${String(total).padStart(2, "0")} · ` : ""}
-            /* {entries} {entries === 1 ? "entry" : "entries"} in this journal · placeholder content */
-          </p>
+  {stop && total ? `Stop ${String(stop).padStart(2, "0")} of ${String(total).padStart(2, "0")} · ` : ""}
+  {entries} {entries === 1 ? "entry" : "entries"} in this journal
+</p>
         </motion.div>
 
         <motion.div variants={rise}>
