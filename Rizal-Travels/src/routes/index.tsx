@@ -1,142 +1,103 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { motion } from "framer-motion";
-import heroMap from "@/assets/hero-map.jpg";
-import { Navigation } from "@/components/journey";
+import { ArrowRight } from "lucide-react";
+import { JourneyMap } from "@/components/journey-map";
+import { Navigation, stagger, rise, wrapWide } from "@/components/journey";
+import { countries } from "@/data/rizalTravelData";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Rizal's Journey Through Europe" },
-      { name: "description", content: "An interactive look at José Rizal's travels across Europe." },
+      {
+        name: "description",
+        content: "An interactive look at José Rizal's travels across Europe.",
+      },
       { property: "og:title", content: "Rizal's Journey Through Europe" },
-      { property: "og:description", content: "An interactive look at José Rizal's travels across Europe." },
+      {
+        property: "og:description",
+        content: "An interactive look at José Rizal's travels across Europe.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
 });
 
-const fadeUp = {
-  initial: { opacity: 0, y: 18 },
-  animate: { opacity: 1, y: 0 },
-};
-
-// Faint dashed route across the map: Madrid → Paris → Brussels → Berlin.
-function HeroRoute() {
-  return (
-    <motion.svg
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1.4, delay: 1 }}
-      className="absolute inset-0 h-full w-full"
-      viewBox="0 0 1920 1080"
-      preserveAspectRatio="xMidYMid slice"
-      aria-hidden="true"
-    >
-      <motion.path
-        d="M 480 850 C 600 660, 700 520, 870 420 S 960 340, 1000 300 S 1350 220, 1450 180"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="1.8"
-        strokeDasharray="1 14"
-        strokeLinecap="round"
-        initial={{ pathLength: 0 }}
-        animate={{ pathLength: 1 }}
-        transition={{ duration: 3, delay: 1.2, ease: "easeInOut" }}
-      />
-      {[
-        [480, 850],
-        [870, 420],
-        [1000, 300],
-        [1450, 180],
-      ].map(([cx, cy], i) => (
-        <motion.circle
-          key={i}
-          cx={cx}
-          cy={cy}
-          r="6"
-          fill="currentColor"
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 1.4 + i * 0.7, duration: 0.4 }}
-        />
-      ))}
-    </motion.svg>
-  );
-}
-
+// The opening screen: who (José Rizal), what (his travels), how (follow the route, open a country).
+// The route on the map draws itself once on load; that is the only big motion on this page.
 function Home() {
   return (
     <>
-      <Navigation />
-      <motion.main initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
-        <section className="relative flex min-h-[calc(100vh-5rem)] flex-col items-center justify-center overflow-hidden text-center">
-          <div className="absolute inset-0" aria-hidden="true">
-            <img
-              src={heroMap}
-              alt=""
-              width={1920}
-              height={1080}
-              className="hero-drift h-full w-full object-cover opacity-45"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/30 to-background/80" />
-          </div>
-
-          <div className="absolute inset-0 text-foreground/20" aria-hidden="true">
-            <HeroRoute />
-          </div>
-
-          <div className="relative z-10 px-8 py-16">
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              className="flex items-center justify-center gap-4"
-            >
-              <span className="h-px w-12 bg-primary/50" />
-              <p className="text-xs uppercase tracking-[0.35em] text-primary">An interactive historical travel experience</p>
-              <span className="h-px w-12 bg-primary/50" />
-            </motion.div>
-
+      <Navigation wide />
+      <main className="relative overflow-hidden">
+        <div
+          className="paper-grain pointer-events-none absolute inset-0 opacity-60"
+          aria-hidden="true"
+        />
+        <div
+          className={`${wrapWide} relative grid min-h-[calc(100vh-4.5rem)] items-center gap-12 py-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16`}
+        >
+          <motion.div variants={stagger} initial="hidden" animate="show">
+            <motion.p variants={rise} className="text-xl font-semibold text-primary">
+              The travels of José Rizal
+            </motion.p>
             <motion.h1
-              {...fadeUp}
-              transition={{ duration: 0.6, delay: 0.25 }}
-              className="mt-8 font-display text-7xl leading-tight text-foreground drop-shadow-sm"
+              variants={rise}
+              className="mt-4 font-display text-6xl font-semibold leading-[1.02] text-foreground sm:text-7xl xl:text-7xl 2xl:text-8xl"
             >
-              Rizal's Journey
-              <br />
-              <em>Through Europe</em>
+              Rizal's Journey Through Europe
             </motion.h1>
-
             <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground"
+              variants={rise}
+              className="mt-7 max-w-xl text-xl leading-relaxed text-muted-foreground"
             >
-              Open the journal and follow José Rizal across the cities and countries
-              of Europe that shaped his ideas — one place, one story at a time.
+              Follow his route across the map. Open any country to see where he stayed and what he
+              did there.
             </motion.p>
 
-            <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.55 }}>
+            <motion.div variants={rise} className="mt-10">
               <Link
                 to="/europe"
-                className="group mt-10 inline-flex items-center gap-3 rounded-sm bg-primary px-10 py-4 text-sm uppercase tracking-widest text-primary-foreground shadow-lg transition hover:bg-primary/90"
+                className="group inline-flex items-center gap-3 rounded-md bg-primary px-9 py-4 text-xl font-semibold text-primary-foreground shadow-lg transition-colors hover:bg-primary/90"
               >
-                Begin the Journey
-                <span className="transition-transform group-hover:translate-x-1">→</span>
+                Begin the journey
+                <ArrowRight
+                  className="h-5 w-5 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
               </Link>
             </motion.div>
 
-            <motion.p
-              {...fadeUp}
-              transition={{ duration: 0.6, delay: 0.7 }}
-              className="mt-10 text-xs uppercase tracking-[0.3em] text-muted-foreground"
-            >
-              Spain · France · Belgium · Germany
-            </motion.p>
-          </div>
-        </section>
-      </motion.main>
+            <motion.nav variants={rise} aria-label="Countries" className="mt-10">
+              <ol className="flex flex-wrap items-center gap-y-3 text-lg">
+                {countries.map((c, i) => (
+                  <li key={c.id} className="flex items-center">
+                    {i > 0 && (
+                      <span className="mx-3 h-px w-6 bg-foreground/30" aria-hidden="true" />
+                    )}
+                    <Link
+                      to="/europe/$countryId"
+                      params={{ countryId: c.id }}
+                      className="font-medium text-foreground/80 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary hover:decoration-primary"
+                    >
+                      {c.name}
+                    </Link>
+                  </li>
+                ))}
+              </ol>
+            </motion.nav>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <JourneyMap mode="link" />
+          </motion.div>
+        </div>
+      </main>
     </>
   );
 }

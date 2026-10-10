@@ -18,6 +18,12 @@
 //  - `image` fields: leave the empty string ("") to show a dashed
 //    "Image placeholder" box, or paste a web address (URL) of a photo.
 //  - `flag` fields: a short label or emoji shown on the country card.
+//  - `visits` (optional, places only): a list of visit dates, e.g.
+//    visits: ["June 1883", "September 1888"]. Shown as date chips at the
+//    top of the place. Leave it out and nothing is shown.
+//  - `labelPosition` (optional, countries only): where the country name sits
+//    next to its pin: "bottom" (default), "top", "left" or "right". Use it
+//    if two labels overlap on the map.
 //  - `mapPosition` (optional, countries only): where the wax-seal pin
 //    sits on the Europe map page, as percentages from the left (x)
 //    and from the top (y). Leave it out and that country gets no pin.
@@ -36,6 +42,7 @@ export type Place = {
   id: string;
   name: string;
   shortDescription: string;
+  visits?: string[]; // optional — dates of each visit, shown as chips
   image?: string; // optional — empty shows an "Image placeholder" box
   highlights: Highlight[];
 };
@@ -46,6 +53,7 @@ export type Country = {
   flag: string; // placeholder emoji or short label
   shortDescription: string;
   image?: string; // optional — empty shows an "Image placeholder" box
+  labelPosition?: "top" | "bottom" | "left" | "right"; // optional — which side of the pin the name sits on
   mapPosition?: { x: number; y: number }; // optional — pin spot on the Europe map, in % from the left (x) and top (y)
   places: Place[];
 };
@@ -80,6 +88,7 @@ export const countries: Country[] = [
     name: "Spain",
     flag: "🇪🇸",
     mapPosition: { x: 22.5, y: 81.4 },
+    labelPosition: "right",
     shortDescription: "Rizal's first European base. He arrived in Barcelona in 1882 and studied in Madrid until 1884, where his political ideas took shape.",
     image: "/map_spain.jpg",
     places: [
@@ -162,6 +171,7 @@ export const countries: Country[] = [
     name: "France",
     flag: "🇫🇷",
     mapPosition: { x: 41.7, y: 42.9 },
+    labelPosition: "left",
     shortDescription: "Rizal's time in France helped him grow as a doctor, historian, and reformist through medical training, historical research, Filipino organizations, and artistic connections.",
     image: "/map_france.jpg",
     places: [
@@ -170,6 +180,7 @@ export const countries: Country[] = [
         name: "Paris",
         shortDescription: "Paris was a major center of learning, culture, and Filipino intellectual activity during Rizal’s travels in Europe",
         image: "/paris 2.png",
+        visits: ["June 1883", "November 1885 – 1886", "September 1888"],
         highlights: [
           {
             id: "h1",
@@ -216,6 +227,7 @@ export const countries: Country[] = [
     name: "Belgium",
     flag: "🇧🇪",
     mapPosition: { x: 49.5, y: 33.5 },
+    labelPosition: "top",
     shortDescription: "Rizal stayed in Belgium from 1890 to 1891, living in Brussels and later in Ghent, where El Filibusterismo was printed.",
     image: "/map_belgium.jpg",
     places: [
