@@ -104,10 +104,10 @@ export function VintagePhoto({
           </>
         )}
       </div>
-      <figcaption className="mt-3 flex items-center justify-between px-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
+      {/* <figcaption className="mt-3 flex items-center justify-between px-1 text-xs uppercase tracking-[0.18em] text-muted-foreground">
         <span>Historical image</span>
         <span>{image ? "Archival print" : "Placeholder"}</span>
-      </figcaption>
+      </figcaption> */}
     </figure>
   );
 }
@@ -220,7 +220,7 @@ export function CountryHeader({ country }: { country: Country }) {
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">{country.shortDescription}</p>
 
           <p className="mt-8 text-[11px] uppercase tracking-[0.26em] text-muted-foreground/80">
-            {count} {count === 1 ? "place" : "places"} in this chapter · placeholder entry
+            /* {count} {count === 1 ? "place" : "places"} in this chapter · placeholder entry */
           </p>
         </motion.div>
 
@@ -352,7 +352,7 @@ export function PlaceHeader({
 
           <p className="mt-8 text-[11px] uppercase tracking-[0.26em] text-muted-foreground/80">
             {stop && total ? `Stop ${String(stop).padStart(2, "0")} of ${String(total).padStart(2, "0")} · ` : ""}
-            {entries} {entries === 1 ? "entry" : "entries"} in this journal · placeholder content
+            /* {entries} {entries === 1 ? "entry" : "entries"} in this journal · placeholder content */
           </p>
         </motion.div>
 
@@ -597,9 +597,9 @@ export function PlaceSection({
           </div>
         </div>
         <Divider className="mt-5 max-w-md" />
-        <p className="mt-4 max-w-2xl text-base uppercase tracking-[0.18em] text-muted-foreground">
+        {/* <p className="mt-4 max-w-2xl text-base uppercase tracking-[0.18em] text-muted-foreground">
           Entries from the journal · scroll to read them in order
-        </p>
+        </p> */}
       </motion.div>
 
       <div className="mt-14">

@@ -75,8 +75,8 @@ export const countries: Country[] = [
     id: "spain",
     name: "Spain",
     flag: "🇪🇸",
-    shortDescription: "Rizal's first European base. He arrived in Barcelona in 1882 and studied in Madrid until 1884, where his political ideas took shape.",
-    image: "/spain_barcelona.jpg",
+    shortDescription: "Placeholder overview of Rizal's time in Spain.",
+    image: "/map_spain.jpg",
     places: [
       {
         id: "barcelona",
@@ -157,7 +157,7 @@ export const countries: Country[] = [
     name: "France",
     flag: "🇫🇷",
     shortDescription: "Placeholder overview of Rizal's time in France.",
-    image: "",
+    image: "/map_france.jpg",
     places: [
       placeholderPlace("paris", "Paris"),
     ],
@@ -232,7 +232,7 @@ export const countries: Country[] = [
     name: "Germany",
     flag: "🇩🇪",
     shortDescription: "Placeholder overview of Rizal's time in Germany.",
-    image: "",
+    image: "/map_germany.jpg",
     places: [
       placeholderPlace("heidelberg", "Heidelberg"),
       placeholderPlace("berlin", "Berlin"),
