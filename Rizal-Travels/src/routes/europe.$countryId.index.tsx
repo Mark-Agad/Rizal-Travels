@@ -49,8 +49,8 @@ function CountryPage() {
               <h2 className="font-display text-4xl italic text-foreground">Places associated with Rizal</h2>
             </div>
             <p className="mt-3 max-w-2xl text-base text-muted-foreground">
-              Scroll to follow the journey in order, or use the shortcuts below to jump straight to a
-              location. Placeholder text until your group adds the researched information.
+              {/* Scroll to follow the journey in order, or use the shortcuts below to jump straight to a
+              location. Placeholder text until your group adds the researched information. */}
             </p>
           </motion.div>
 
