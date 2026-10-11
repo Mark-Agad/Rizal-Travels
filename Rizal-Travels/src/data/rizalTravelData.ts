@@ -151,7 +151,7 @@ export const countries: Country[] = [
             year: "June 1884",
             title: "Licentiate in Medicine",
             category: "Milestone",
-            description: "On June 21, 1884, Rizal received his Licentiate in Medicine from the Universidad Central. He also completed his studies in Philosophy and Letters with excellent ratings.",
+            description: "On June 21, 1884, Rizal received his Licentiate in Medicine from the Universidad Central de Madrid. He also completed his studies in Philosophy and Letters with excellent ratings.",
             image: "/Licentiate_in_Medicine.jpg",
           },
           {
