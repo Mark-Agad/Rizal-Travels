@@ -244,7 +244,7 @@ export const countries: Country[] = [
             title: "Medical Specialization",
             category: "Advanced Ophthalmic Training",
             description:
-              "Rizal specialized in eye surgery at the University Eye Hospital in Heidelberg under the guidance of the renowned German ophthalmologist Dr. Otto Becker, aiming to acquire the surgical skills needed to cure his mother's blindness.",
+              "Rizal specialized in eye surgery at the University Eye Clinic in Heidelberg under the guidance of the renowned German ophthalmologist Dr. Otto Becker, aiming to acquire the surgical skills needed to cure his mother's blindness.",
             image: "/Ophthalmology training.jpeg",
           },
           {
