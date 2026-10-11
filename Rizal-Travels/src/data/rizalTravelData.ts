@@ -180,7 +180,6 @@ export const countries: Country[] = [
         name: "Paris",
         shortDescription: "Paris was a major center of learning, culture, and Filipino intellectual activity during Rizal’s travels in Europe",
         image: "/paris 2.png",
-        visits: ["June 1883", "November 1885 – 1886", "September 1888"],
         highlights: [
           {
             id: "h1",
@@ -289,16 +288,87 @@ export const countries: Country[] = [
   },
     ],
   },
-  {
+    {
     id: "germany",
     name: "Germany",
     flag: "🇩🇪",
     mapPosition: { x: 63, y: 34 },
-    shortDescription: "Placeholder overview of Rizal's time in Germany.",
+    shortDescription:
+      "During his time in Germany from February 1886 to May 1887, Dr. Jose Rizal studied ophthalmology, finished and published his landmark novel Noli Me Tángere, and integrated himself into European scientific and academic circles.",
     image: "/map_germany.jpg",
     places: [
-      placeholderPlace("heidelberg", "Heidelberg"),
-      placeholderPlace("berlin", "Berlin"),
+      {
+        id: "heidelberg",
+        name: "Heidelberg & Wilhelmsfeld",
+        shortDescription:
+          "During his stay in Heidelberg and Wilhelmsfeld from February to August 1886, Dr. José Rizal focused on specializing in ophthalmology while immersing himself in German culture. At the University Eye Hospital, he trained under the renowned surgeon Dr. Otto Becker to master eye surgery techniques that would later allow him to operate on his mother's failing eyesight.",
+        image: "/Germany2.jpg",
+        highlights: [
+          {
+            id: "h1",
+            year: "1886",
+            title: "Medical Specialization",
+            category: "Advanced Ophthalmic Training",
+            description:
+              "Rizal specialized in eye surgery at the University Eye Hospital in Heidelberg under the guidance of the renowned German ophthalmologist Dr. Otto Becker, aiming to acquire the surgical skills needed to cure his mother's blindness.",
+            image: "/Ophthalmology training.jpeg",
+          },
+          {
+            id: "h2",
+            year: "1886",
+            title: "Literary & Cultural Engagement",
+            category: "Artistic & Social Immersion",
+            description:
+              "He joined the Heidelberg Chess Club to integrate into local academic circles and penned the nostalgic poem A Las Flores de Heidelberg, drawn from the beauty of forget-me-nots blooming along the banks of the Neckar River.",
+            image: "/germanychess.jpg",
+          },
+          {
+            id: "h3",
+            year: "1886",
+            title: "Philosophical & Linguistic Growth",
+            category: "The Wilhelmsfeld Interlude",
+            description:
+              "During a three-month stay with Pastor Karl Ullmer and his family in Wilhelmsfeld, Rizal perfected his German fluency, engaged in open-minded philosophical and religious dialogues, and continued polishing his novel Noli Me Tángere.",
+            image: "/germanypastor.jpg",
+          },
+          {
+            id: "h4",
+            year: "1886",
+            title: "Intellectual Alliances",
+            category: "Beginning of the Blumentritt Correspondence",
+            description:
+              "Rizal initiated contact with Austrian scholar Professor Ferdinand Blumentritt by mailing him a bilingual (Tagalog/Spanish) arithmetic book (Aritmetica), sparking a historic intellectual partnership and lifelong friendship.",
+            image: "/GermanyFerdinand.jpeg",
+          },
+        ],
+      },
+      {
+        id: "berlin",
+        name: "Berlin",
+        shortDescription:
+          "During his stay in Berlin (Nov 1886 – May 1887), Dr. José Rizal earned scientific recognition by joining Berlin’s Anthropological, Ethnological, and Geographical Societies and presenting his paper Tagalische Verskunst. Despite enduring severe poverty and hunger, he completed and published his historic novel Noli Me Tángere in March 1887, made possible by a ₱300 loan from Dr. Máximo Viola.",
+        image: "/berlincity.jpg",
+        highlights: [
+          {
+            id: "b1",
+            year: "1886",
+            title: "Integration into European Scientific Circles",
+            category: "Scientific & Academic Recognition",
+            description:
+              "Rizal gained recognition among prominent European scholars and was inducted into Berlin's Anthropological, Ethnological, and Geographical Societies. During this time, he presented his scholarly paper on Tagalog metrical art, \"Tagalische Verskunst\", before the Ethnographic Society of Berlin.",
+            image: "/berlinanthro.webp",
+          },
+          {
+            id: "b2",
+            year: "1887",
+            title: "The Publication of Noli Me Tángere",
+            category: "Literary Landmark",
+            description:
+              "While enduring extreme poverty, hunger, and health struggles in Berlin, Rizal completed his masterpiece novel exposing Philippine society under Spanish rule. Noli Me Tángere was officially printed in March 1887, made possible by a financial loan of ₱300 from his friend Dr. Máximo Viola.",
+            image: "/nolimetangere.jpg",
+          },
+        ],
+      },
     ],
   },
 ];
