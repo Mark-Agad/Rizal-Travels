@@ -144,6 +144,12 @@ body {
   font-size: 1.125rem;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+
+  background-image: url("/compass-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 :focus-visible {
