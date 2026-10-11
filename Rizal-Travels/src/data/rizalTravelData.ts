@@ -228,7 +228,7 @@ export const countries: Country[] = [
     flag: "🇩🇪",
     mapPosition: { x: 63, y: 34 },
     shortDescription:
-      "During his time in Germany from February 1886 to May 1887, Dr. Jose Rizal studied ophthalmology, finished and published his landmark novel Noli Me Tángere, and integrated himself into European scientific and academic circles.",
+      "During his time in Germany from February 1886 to May 1887, Dr. Jose Rizal studied and trained ophthalmology, finished and published his landmark novel Noli Me Tángere, and integrated himself into European scientific and academic circles.",
     image: "/map_germany.jpg",
     places: [
       {
