@@ -325,7 +325,7 @@ export const countries: Country[] = [
         year: "1890–1891",
         title: "Residence in Brussels",
         category: "Residence",
-        description: "Rizal lived at 42 Rue Philippe de Champagne, where he worked on his novel El Filibusterismo.",
+        description: "Rizal lived at 42 Rue Philippe de Champagne (historically No. 38), where he worked on his novel El Filibusterismo.",
         image: "/42rue.jpg",
       },
       {
