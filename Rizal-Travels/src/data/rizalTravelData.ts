@@ -289,7 +289,7 @@ export const countries: Country[] = [
             title: "Integration into European Scientific Circles",
             category: "Scientific & Academic Recognition",
             description:
-              "Rizal gained recognition among prominent European scholars and was inducted into Berlin's Anthropological, Ethnological, and Geographical Societies. During this time, he presented his scholarly paper on Tagalog metrical art, \"Tagalische Verskunst\", before the Ethnographic Society of Berlin.",
+              "Rizal gained high recognition among prominent European scholars and was inducted into Berlin's Anthropological, Ethnological, and Geographical Societies. During this time, he presented his scholarly paper on Tagalog metrical art, Tagalische Verskunst, before the Berlin Society for Anthropology, Ethnology, and Prehistory. Written in German, the paper earned high praise from the scientific community and was officially published by the society later that year.",
             image: "/berlinanthro.webp",
           },
           {
