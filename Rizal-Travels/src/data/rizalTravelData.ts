@@ -235,7 +235,7 @@ export const countries: Country[] = [
         id: "heidelberg",
         name: "Heidelberg & Wilhelmsfeld",
         shortDescription:
-          "During his stay in Heidelberg and Wilhelmsfeld from February to August 1886, Dr. José Rizal focused on specializing in ophthalmology while immersing himself in German culture. At the University Eye Hospital, he trained under the renowned surgeon Dr. Otto Becker to master eye surgery techniques that would later allow him to operate on his mother's failing eyesight.",
+          "During his stay in Heidelberg and Wilhelmsfeld from February to August 1886, Dr. José Rizal focused on specializing in ophthalmology while immersing himself in German culture. At the University Eye Clinic, he trained under the renowned surgeon Dr. Otto Becker to master eye surgery techniques that would later allow him to operate on his mother's failing eyesight.",
         image: "/Germany2.jpg",
         highlights: [
           {
